@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef } from "react";
+import { Route } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Products from "./Components/ProductList";
+import Cart from "./Components/Cart";
+import AboutUs from "./Components/AboutUs";
+import Details from "./Components/Details";
+import { AppContextProvider } from "./AppContext";
+import { useOnClickOutside } from "./hooks";
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppContextProvider>
+        <div ref={node}>
+          <Navbar open={open} setOpen={setOpen}></Navbar>
+        </div>
+        <Route exact path="/" component={Products} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/about" component={AboutUs} />
+        <Route path="/details" component={Details} />
+      </AppContextProvider>
     </div>
   );
 }
