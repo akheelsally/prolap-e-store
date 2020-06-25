@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/prolap-e-store/static/css/main.fdae32e1.chunk.css",
+    "main.js": "/prolap-e-store/static/js/main.88ac03ec.chunk.js",
+    "main.js.map": "/prolap-e-store/static/js/main.88ac03ec.chunk.js.map",
+    "runtime-main.js": "/prolap-e-store/static/js/runtime-main.baff84ce.js",
+    "runtime-main.js.map": "/prolap-e-store/static/js/runtime-main.baff84ce.js.map",
+    "static/js/2.449c7fac.chunk.js": "/prolap-e-store/static/js/2.449c7fac.chunk.js",
+    "static/js/2.449c7fac.chunk.js.map": "/prolap-e-store/static/js/2.449c7fac.chunk.js.map",
+    "index.html": "/prolap-e-store/index.html",
+    "precache-manifest.654614b7bab735fe4cb0c41a5dcf6c2f.js": "/prolap-e-store/precache-manifest.654614b7bab735fe4cb0c41a5dcf6c2f.js",
+    "service-worker.js": "/prolap-e-store/service-worker.js",
+    "static/css/main.fdae32e1.chunk.css.map": "/prolap-e-store/static/css/main.fdae32e1.chunk.css.map",
+    "static/js/2.449c7fac.chunk.js.LICENSE.txt": "/prolap-e-store/static/js/2.449c7fac.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/prolap-e-store/static/media/logo.5d5d9eef.svg",
+    "static/media/prolap-logo.jpg": "/prolap-e-store/static/media/prolap-logo.96c2a273.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.baff84ce.js",
+    "static/js/2.449c7fac.chunk.js",
+    "static/css/main.fdae32e1.chunk.css",
+    "static/js/main.88ac03ec.chunk.js"
+  ]
+}
