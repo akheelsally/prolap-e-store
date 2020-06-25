@@ -20,9 +20,14 @@ class ProductCard extends Component {
       optical_drive,
       optical_drive_details,
     } = this.props.data;
+    console.log(process.env.PUBLIC_URL + "/" + img);
     return (
       <div className="product-card">
-        <img className="product-card_img" src={img} alt="product image" />
+        <img
+          className="product-card_img"
+          src={process.env.PUBLIC_URL + "/" + img}
+          alt="product image"
+        />
         <div className="product-card_content">
           <h2 className="product-card_brand">{brand}</h2>
           <h3 className="product-card_model">{model}</h3>
