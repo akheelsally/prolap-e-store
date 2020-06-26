@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/Navbar";
@@ -16,15 +16,19 @@ function App() {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <div className="App">
-      <AppContextProvider>
-        <div ref={node}>
-          <Navbar open={open} setOpen={setOpen}></Navbar>
-        </div>
-        <Route exact path="/" component={Products} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/about" component={AboutUs} />
-        <Route path="/details" component={Details} />
-      </AppContextProvider>
+      <Router>
+        <AppContextProvider>
+          <div ref={node}>
+            <Navbar open={open} setOpen={setOpen}></Navbar>
+          </div>
+          <Switch>
+            <Route exact path="/" component={Products} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/about" component={AboutUs} />
+            <Route path="/details" component={Details} />
+          </Switch>
+        </AppContextProvider>
+      </Router>
     </div>
   );
 }
